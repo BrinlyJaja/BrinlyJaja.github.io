@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta
+            name="description"
+            content="Hi, I am Brinly a Computer engineering student who does a little bit of everything."
+        />
+        <meta name="author" content="Brinly Jaja" />
+        <meta
+            name="keywords"
+            content="Back end developer, machine learning engineer, web developer, portfolio, Brinly Jaja, hardware engineer, Python developer, AI developer, photographer, content creator"
+        />
+        <meta name="robots" content="index, follow" />
+        <title>bboonstra • portfolio</title>
+        <!-- Canonical Link -->
+        <link rel="canonical" href="https://brinlyjaja.github.io" />
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="brinlyjaja • portfolio" />
+        <meta
+            property="og:description"
+            content="Hi, I am Brinly a Computer engineering student who does a little bit of everything."
+        />
+        <meta property="og:image" content="/images/preview.png" />
+        <meta property="og:url" content="https://brinlyjaja.github.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="brinlyjaja • portfolio" />
+
+    
+
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="projects.css" />
+        <!-- Add language-specific meta tag -->
+        <meta http-equiv="content-language" content="en-us" />
+
+        <!-- Add social media profiles -->
+        <link href="https://github.com/brinlyjaja" rel="me" />
+        <link href="https://www.linkedin.com/in/brinly-jaja-b22865280/" rel="me" />
+
+        <script
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id="f1406dd2-9414-4623-8bf2-dae0b05b7ea1"
+        ></script>
+
+        <!-- Favicon and Apple Touch Icons -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/icons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/icons/favicon-16x16.png"
+        />
+        <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+
+        <!-- PWA manifest -->
+        <link rel="manifest" href="manifest.json" />
+
+        <!-- Safari specific -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta
+            name="apple-mobile-web-app-title"
+            content="bboonstra • portfolio"
+        />
+
+        <!-- Microsoft Tiles -->
+        <meta name="msapplication-TileColor" content="#1E1E1E" />
+        <meta name="theme-color" content="#1E1E1E" />
+    </head>
+    <body>
+        <div id="dot-cursor" style="display: none"></div>
+        <canvas id="bg-canvas"></canvas>
+        <section class="splash-container" id="home">
+            <div class="splash-content">
+                <img src="/images/headshot.png" alt="headshot" />
+                <div class="text-content glass-box">
+                    <h1>a little bit of everything</h1>
+                    <p>
+                        I'm Brinly Jaja, a student of the University of Oklahoma. I'm a back end
+                        developer, with a proficency in fullstack like this portfolio, and a creative
+                        at night. This is an introduction to my work and life, so let my
+                        <a href="#projects" class="projects-link">projects</a>
+                        speak for themselves.
+                    </p>
+                    <div class="social-icons">
+                        <a
+                            href="https://www.linkedin.com/in/brinly-jaja-b22865280/"
+                            target="_blank"
+                            id="linkedin-link"
+                            ><img
+                                src="images/icons/linkedin.png"
+                                alt="LinkedIn"
+                        /></a>
+                        <a
+                            href="https://github.com/brinlyjaja"
+                            target="_blank"
+                            id="github-link"
+                            ><img
+                                src="https://simpleicons.org/icons/github.svg"
+                                alt="GitHub"
+                                style="filter: invert(1)"
+                        /></a>
+                        <a
+                            href="mailto:belemajaja3@gmail.com"
+                            target="_blank"
+                            id="email-link"
+                            ><img
+                                src="https://simpleicons.org/icons/gmail.svg"
+                                alt="Email"
+                                style="filter: invert(1)"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-container" id="projects">
+            <h2>Projects</h2>
+            <div class="project-filter">
+                <div class="project-layouts glass-box">
+                    <svg
+                        class="hoverable layout layout-active"
+                        id="layout-1"
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M3 7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3H16.2C17.8802 3 18.7202 3 19.362 3.32698C19.9265 3.6146 20.3854 4.07354 20.673 4.63803C21 5.27976 21 6.11984 21 7.8V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <svg
+                        class="hoverable layout"
+                        id="layout-2"
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"
+                    >
+                        <path
+                            d="M8.4 3H4.6C4.03995 3 3.75992 3 3.54601 3.10899C3.35785 3.20487 3.20487 3.35785 3.10899 3.54601C3 3.75992 3 4.03995 3 4.6V8.4C3 8.96005 3 9.24008 3.10899 9.45399C3.20487 9.64215 3.35785 9.79513 3.54601 9.89101C3.75992 10 4.03995 10 4.6 10H8.4C8.96005 10 9.24008 10 9.45399 9.89101C9.64215 9.79513 9.79513 9.64215 9.89101 9.45399C10 9.24008 10 8.96005 10 8.4V4.6C10 4.03995 10 3.75992 9.89101 3.54601C9.79513 3.35785 9.64215 3.20487 9.45399 3.10899C9.24008 3 8.96005 3 8.4 3Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M19.4 3H15.6C15.0399 3 14.7599 3 14.546 3.10899C14.3578 3.20487 14.2049 3.35785 14.109 3.54601C14 3.75992 14 4.03995 14 4.6V8.4C14 8.96005 14 9.24008 14.109 9.45399C14.2049 9.64215 14.3578 9.79513 14.546 9.89101C14.7599 10 15.0399 10 15.6 10H19.4C19.9601 10 20.2401 10 20.454 9.89101C20.6422 9.79513 20.7951 9.64215 20.891 9.45399C21 9.24008 21 8.96005 21 8.4V4.6C21 4.03995 21 3.75992 20.891 3.54601C20.7951 3.35785 20.6422 3.20487 20.454 3.10899C20.2401 3 19.9601 3 19.4 3Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M19.4 14H15.6C15.0399 14 14.7599 14 14.546 14.109C14.3578 14.2049 14.2049 14.3578 14.109 14.546C14 14.7599 14 15.0399 14 15.6V19.4C14 19.9601 14 20.2401 14.109 20.454C14.2049 20.6422 14.3578 20.7951 14.546 20.891C14.7599 21 15.0399 21 15.6 21H19.4C19.9601 21 20.2401 21 20.454 20.891C20.6422 20.7951 20.7951 20.6422 20.891 20.454C21 20.2401 21 19.9601 21 19.4V15.6C21 15.0399 21 14.7599 20.891 14.546C20.7951 14.3578 20.6422 14.2049 20.454 14.109C20.2401 14 19.9601 14 19.4 14Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M8.4 14H4.6C4.03995 14 3.75992 14 3.54601 14.109C3.35785 14.2049 3.20487 14.3578 3.10899 14.546C3 14.7599 3 15.0399 3 15.6V19.4C3 19.9601 3 20.2401 3.10899 20.454C3.20487 20.6422 3.35785 20.7951 3.54601 20.891C3.75992 21 4.03995 21 4.6 21H8.4C8.96005 21 9.24008 21 9.45399 20.891C9.64215 20.7951 9.79513 20.6422 9.89101 20.454C10 20.2401 10 19.9601 10 19.4V15.6C10 15.0399 10 14.7599 9.89101 14.546C9.79513 14.3578 9.64215 14.2049 9.45399 14.109C9.24008 14 8.96005 14 8.4 14Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <svg
+                        class="hoverable layout"
+                        id="layout-3"
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M19 6C19.5523 6 20 5.55228 20 5C20 4.44772 19.5523 4 19 4C18.4477 4 18 4.44772 18 5C18 5.55228 18.4477 6 19 6Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M19 20C19.5523 20 20 19.5523 20 19C20 18.4477 19.5523 18 19 18C18.4477 18 18 18.4477 18 19C18 19.5523 18.4477 20 19 20Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M5 6C5.55228 6 6 5.55228 6 5C6 4.44772 5.55228 4 5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M5 20C5.55228 20 6 19.5523 6 19C6 18.4477 5.55228 18 5 18C4.44772 18 4 18.4477 4 19C4 19.5523 4.44772 20 5 20Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+                <input
+                    type="text"
+                    id="project-search"
+                    placeholder="Search projects..."
+                />
+                <div class="filter-pills">
+                    <button
+                        class="hoverable pill filter-pill"
+                        data-filter="frontend"
+                    >
+                        Frontend
+                    </button>
+                    <button
+                        class="hoverable pill filter-pill"
+                        data-filter="backend"
+                    >
+                        Backend
+                    </button>
+                    <button
+                        class="hoverable pill filter-pill"
+                        data-filter="game"
+                    >
+                        Games
+                    </button>
+                    <button
+                        class="hoverable pill filter-pill"
+                        data-filter="awards"
+                    >
+                        Awards
+                    </button>
+                    <button
+                        class="hoverable pill filter-pill"
+                        data-filter="community"
+                    >
+                        Community
+                    </button>
+                </div>
+                <div class="project-stats-toggle">
+                    <button class="hoverable pill">Stats for Nerds</button>
+                </div>
+            </div>
+            <div class="project-grid">
+                <div
+                    class="project glass-box"
+                    data-tags="python, database, databases, pypi, 
+                    github, docs, open source, pip, unit tests, documentation, packages"
+                >
+                    <h3>Effortless</h3>
+                    <img
+                        id="effortless-banner"
+                        class="hoverable"
+                        src="https://effortless.bboonstra.dev/images/bannerlogotextright.png"
+                        alt="Effortless Banner"
+                    />
+                    <p>
+                        A Python package designed to make databases simple and
+                        intuitive.
+                    </p>
+                    <div class="stats">
+                        <a
+                            href="https://effortless.bboonstra.dev/docs/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                class="guardio-badge guardio-badge-cta"
+                                src="https://img.shields.io/badge/docs-latest-698EFF.svg?style=for-the-badge"
+                                alt="Documentation"
+                            />
+                        </a>
+                        <a
+                            href="https://pypi.org/project/Effortless/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                class="guardio-badge"
+                                src="https://img.shields.io/pypi/v/effortless.svg?style=for-the-badge&logo=pypi&logoColor=white&color=698EFF"
+                                alt="PyPI"
+                            />
+                        </a>
+                        <a
+                            href="https://github.com/bboonstra/effortless"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                class="guardio-badge"
+                                src="https://img.shields.io/github/commit-activity/t/bboonstra/effortless?style=for-the-badge&logo=github&color=698EFF"
+                                alt="Total Commits"
+                            />
+                        </a>
+
+                        <a
+                            href="https://pypi.org/project/Effortless/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                alt="PyPI - Downloads"
+                                src="https://img.shields.io/pypi/dm/Effortless?style=for-the-badge&color=698EFF"
+                        /></a>
+                    </div>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="full-stack, web, team, frontend, backend, 
+                    django, css, html, javascript, github, distribution, 
+                    always-available, configurable, community, client-side, server-side"
+                >
+                    <h3>Daughters of Norway Iowa</h3>
+                    <p>
+                        A website for the Daughters of Norway Iowa chapter,
+                        featuring a calendar, events, and resources.
+                    </p>
+                    <a
+                        href="https://www.doniowa.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="https://www.doniowa.com/static/logo.png"
+                            alt="Daughters of Norway Iowa"
+                        />
+                    </a>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="vscode, django, css, extension, open source,
+                    distribution, marketplace"
+                >
+                    <h3>Django CSS Templating</h3>
+                    <p>
+                        A Visual Studio Code extension that adds Intellisense
+                        for the Django templating syntax in CSS files.
+                    </p>
+                    <a
+                        href="https://marketplace.visualstudio.com/items?itemName=bboonstra.django-css-templating"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div
+                            class="repo-card"
+                            data-repo="bboonstra/django-css-templating"
+                            data-theme="dark-theme"
+                        ></div>
+                    </a>
+                    <div class="stats">
+                        <a
+                            href="https://github.com/bboonstra/django-css-templating/blob/main/LICENSE"
+                        >
+                            <img
+                                class="guardio-badge"
+                                alt="GitHub license"
+                                src="https://img.shields.io/github/license/bboonstra/django-css-templating"
+                            />
+                        </a>
+                        <a
+                            href="https://marketplace.visualstudio.com/items?itemName=bboonstra.django-css-templating"
+                        >
+                            <img
+                                class="guardio-badge"
+                                alt="VS Marketplace Installs"
+                                src="https://img.shields.io/visual-studio-marketplace/i/bboonstra.django-css-templating?color=blue"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="game, godot, rogue-like, itch.io, game jam, video game, sfx, music"
+                >
+                    <h3>Unknown Universe</h3>
+                    <p>
+                        In Unknown Universe, you command a lone spaceship
+                        exploring the depths of space, orbiting strange and
+                        hostile planets in a battle for survival.
+                    </p>
+                    <iframe
+                        frameborder="0"
+                        src="https://itch.io/embed/2988328?bg_color=0a0a0a&amp;fg_color=d1f3fa&amp;link_color=474ced&amp;border_color=6b636e"
+                        width="80%"
+                        height="fit-content"
+                        style="padding: 3px; max-width: 600px"
+                    >
+                        <a
+                            href="https://bboonstra.itch.io/unknown-universe"
+                            target="_blank"
+                        >
+                            Unknown Universe by bboonstra, Cyn_1
+                        </a>
+                    </iframe>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="python, cli, zsh, bash, scripting, terminal, game"
+                >
+                    <h3>Idlegame</h3>
+                    <p>
+                        A python package with two missions: entertain you and
+                        teach you. idlegame is ran from the command line, and
+                        uses only real zsh commands to play.
+                    </p>
+                    <iframe
+                        class="pipembed"
+                        src="https://pipembeds.onrender.com/html/idlegame/?theme=dark&amp;text_color=%23fff&amp;border_color=%23444&amp;background_color=%231E1E1E"
+                    ></iframe>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="django, api, pypi, frontend, backend, full-stack, open source, 
+                    css, html, javascript, github, pip, iframe, embed, pipembeds, render, python, packages"
+                >
+                    <h3>PipEmbeds</h3>
+                    <p>
+                        A Django API I wrote in a day on a whim because I
+                        couldn't find an API I wanted. Gets PyPi Python package
+                        data and formats it into human-readable and stylish
+                        preview cards.
+                    </p>
+                    <a
+                        href="https://pipembeds.onrender.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div
+                            class="repo-card"
+                            data-repo="bboonstra/pipembeds"
+                            data-theme="dark-theme"
+                        ></div>
+                    </a>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="robotics, java, team, collaboration, scrum, ftc, 
+                    awards, gradle, android studio, android, app, app development,
+                    OOP, object-oriented programming, leadership, captain, management, mentoring, coaching,
+                    "
+                >
+                    <h3>Ragnarok Robotics</h3>
+                    <p>
+                        I've been the head of the Waukee Northwest Robotics team
+                        and associated club's programming department through
+                        many years of FTC, placing second for the Control
+                        (programming) Award at the State Championship and first
+                        in our league for the 2024-2025 season.
+                    </p>
+                    <a
+                        href="https://github.com/24358-ragnarok"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div
+                            class="repo-card"
+                            data-repo="24358-ragnarok/IntoTheDeep"
+                            data-theme="dark-theme"
+                        ></div>
+                    </a>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="python, ai, stock market, real-time, trading, alpaca, 
+                    api, trading, python, pip, distribution, open source"
+                >
+                    <h3>Guanaco Trade</h3>
+                    <p>
+                        A Python package that uses generative and predictive AI
+                        to make trades in the stock market.
+                    </p>
+                    <a
+                        href="https://github.com/bboonstra/guanaco-trade"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div
+                            class="repo-card"
+                            data-repo="bboonstra/guanaco-trade"
+                            data-theme="dark-theme"
+                        ></div>
+                    </a>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="game, python, terminal, ansi, adventure, choose-your-own-adventure, 
+                    interactive, game jam, responsive, replit, awards"
+                >
+                    <h3>Deep Dive</h3>
+                    <p>
+                        One of my earliest projects, for the first Game Jam I
+                        ever entered. Tells an immersive
+                        choose-your-own-adventure through purely the Python
+                        terminal.
+                    </p>
+                    <iframe
+                        id="dd-embed"
+                        src="https://replit.com/@IceFire03/Deep-Dive?embed=true"
+                        width="90%"
+                        style="max-width: 600px; min-width: 300px"
+                        height="300px"
+                    ></iframe>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="frontend, puzzle, game"
+                >
+                    <h3>Pixel Puzzlebox</h3>
+                    <p>Coming Soon...</p>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="typescript, game, solo"
+                >
+                    <h3>Code Tycoon</h3>
+                    <p>Coming Soon...</p>
+                </div>
+                <div
+                    class="project glass-box"
+                    data-tags="frontend, hackathon, team"
+                >
+                    <h3>APEX Hackathon</h3>
+                    <p>Coming Soon...</p>
+                </div>
+            </div>
+        </section>
+        <script src="mouse.js"></script>
+        <script src="projects.js"></script>
+        <script src="bg.js"></script>
+        <script src="scroll-prompt.js"></script>
+        <script
+            src="https://www.pathing.cc/pathing.js"
+            pathing-api-key="pk_927a2c5c19ef6b96d7ab99cea62a9e64aa2785e3c896283d"
+        ></script>
+        <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+
+        <!-- Scroll Down Prompt -->
+        <div id="scroll-prompt" class="scroll-prompt">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M19 9L12 16L5 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </div>
+        <script src="analytics.js"></script>
+    </body>
+</html>
