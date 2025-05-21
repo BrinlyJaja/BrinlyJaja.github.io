@@ -1,0 +1,21 @@
+{
+    "name": "Brinly Jaja Portfolio",
+    "short_name": "BBJ Portfolio",
+    "description": "Back end & Intermdeiate Full-stack developer specializing in Python, AI, and web development",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1E1E1E",
+    "theme_color": "#1E1E1E",
+    "icons": [
+        {
+            "src": "images/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
