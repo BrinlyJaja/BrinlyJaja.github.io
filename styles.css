@@ -75,17 +75,17 @@
     height: 100vh;
     z-index: -10;
     background: radial-gradient(
-        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        circle at var(--mouse-x, 70%) var(--mouse-y, 70%),
         rgba(255, 255, 255, 0.07),
         transparent 70%
       ),
-      linear-gradient(114deg, rgba(0, 0, 0, 1), rgba(181, 93, 41, 1)),
+      linear-gradient(114deg, rgba(0, 0, 0, 1), rgba(14, 141, 255, 1)),
       url("data:image/svg+xml,%3Csvg viewBox='0 0 341 341' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.31' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: contrast(120%) brightness(100%);
+    filter: contrast(170%) brightness(100%);
     pointer-events: none;
   }
   
