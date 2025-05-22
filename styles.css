@@ -119,9 +119,9 @@
     max-width: 400px;
     border-radius: 12px;
     padding: 10px;
-    background: linear-gradient(to bottom, rgba(69, 66, 66, 0.119), rgba(230, 57, 70, 0.15));
+    background: linear-gradient(to bottom, rgba(69, 66, 66, 0.119), rgba(230, 57, 71, 0.579));
     border: 2px solid rgba(49, 46, 47, 0.4);
-    box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);  
+    box-shadow: 0 4px 20px rgba(120, 9, 18, 0.794);  
   }
   
   .splash-content p {
