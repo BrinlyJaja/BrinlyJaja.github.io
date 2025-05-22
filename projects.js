@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = document.querySelectorAll(".project");
     const layoutButtons = document.querySelectorAll(".layout");
     // Add the stats toggle button
-    const statsToggle = document.querySelector(".project-stats-toggle .pill");
-    const statsElements = document.querySelectorAll(".stats");
+
     const resumeButton = document.getElementById("resume-button");
     const resumeContainer = document.getElementById("resume-container");
     const resumeFrame = document.getElementById("resume-frame");
@@ -15,20 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
    
 
     // Add event listener for the Stats for Nerds toggle
-    if (resumeButton && resumeContainer && resumeFrame){} {
-        resumeButton.addEventListener("click", () => {
-            // Toggle visibility
-            if (resumeContainer.style.display === "none") {
-                resumeContainer.style.display = "block";
-                resumeFrame.src = "resume.pdf"; // Make sure this file is in the correct folder
-                resumeButton.textContent = "Hide Résumé";
-            } else {
-                resumeContainer.style.display = "none";
-                resumeFrame.src = "resume.pdf";
-                resumeButton.textContent = "View Résumé";
-            }
-        });
-    }
+    
+    resumeButton.addEventListener("click", () => {
+        const isActive = resumeContainer.classList.contains("active");
+    
+        if (!isActive) {
+          resumeContainer.classList.add("active");
+          resumeFrame.src = "resume.pdf";
+          resumeButton.textContent = "📄 Hide Résumé";
+        } else {
+          resumeContainer.classList.remove("active");
+          resumeFrame.src = "";
+          resumeButton.textContent = "📄 View Résumé";
+        }
+      });
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.toLowerCase();
