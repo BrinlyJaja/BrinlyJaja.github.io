@@ -139,20 +139,38 @@
   }
   
   .social-icons {
-    padding-top: 20px;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
   }
   
   .social-icons a {
-    width: 30px;
-    border-radius: var(--standard-radius);
-    height: 30px;
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  border: none;
+  width: auto;
+  height: auto;
+  transition: opacity 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    opacity: 0.8;
   }
   
   .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+  .social-icons img:hover {
+    transform: scale(1.1);
   }
   
   .nav-social-icons {
