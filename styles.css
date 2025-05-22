@@ -114,13 +114,12 @@
   }
   
   .glass-box {
-    background-color: rgba(24, 24, 24, 0.7);
+    background: linear-gradient(to bottom, rgba(24, 24, 24, 0.7), rgba(230, 57, 70, 0.2)); /* red tint at bottom */
     padding: 20px 30px;
     border-radius: var(--standard-radius);
     backdrop-filter: blur(5px);
     border: 2px solid var(--border-gray);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(230, 57, 70, 0.2); /* red glow */
   }
   
   .text-content {
