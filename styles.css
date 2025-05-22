@@ -75,11 +75,11 @@
     height: 100vh;
     z-index: -10;
     background: radial-gradient(
-        circle at var(--mouse-x, 70%) var(--mouse-y, 70%),
+        circle at var(--mouse-x, 60%) var(--mouse-y, 60%),
         rgba(255, 255, 255, 0.07),
         transparent 70%
       ),
-      linear-gradient(184deg, rgba(0, 0, 0, 1), rgb(80, 146, 203));
+      linear-gradient(184deg, rgba(0, 0, 0, 1), rgb(51, 22, 118));
       
     background-blend-mode: overlay;
     background-size:cover, cover, 250px;
