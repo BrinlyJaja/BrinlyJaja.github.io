@@ -9,6 +9,10 @@
     --standard-radius: 12px;
     --border-gray: rgba(255, 255, 255, 0.05);
     --bluestra: #69f8ff;
+
+      /* Variables for animated gradient */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
   }
   
   #dot-cursor {
@@ -332,3 +336,9 @@
       transform: translateX(-50%) translateY(-5px);
     }
   }
+  :root {
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+  }
+  
+  
