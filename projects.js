@@ -15,15 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
    
 
     // Add event listener for the Stats for Nerds toggle
-    if (resumeButton) {
+    if (resumeButton && resumeContainer && resumeFrame){} {
         resumeButton.addEventListener("click", () => {
+            // Toggle visibility
             if (resumeContainer.style.display === "none") {
                 resumeContainer.style.display = "block";
-                resumeFrame.src = "BRINLY JAJA_2025 1.pdf"; // Make sure this file is in the correct folder
+                resumeFrame.src = "resume.pdf"; // Make sure this file is in the correct folder
                 resumeButton.textContent = "Hide Résumé";
             } else {
                 resumeContainer.style.display = "none";
-                resumeFrame.src = "";
+                resumeFrame.src = "resume.pdf";
                 resumeButton.textContent = "View Résumé";
             }
         });
