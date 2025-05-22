@@ -6,26 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add the stats toggle button
     const statsToggle = document.querySelector(".project-stats-toggle .pill");
     const statsElements = document.querySelectorAll(".stats");
+    const resumeButton = document.getElementById("resume-button");
+    const resumeContainer = document.getElementById("resume-container");
+    const resumeFrame = document.getElementById("resume-frame");
+
+
 
    
 
     // Add event listener for the Stats for Nerds toggle
-    if (statsToggle) {
-        statsToggle.addEventListener("click", () => {
-            const isActive =
-                statsToggle.classList.contains("filter-pill-active");
-
-            // Ensure all toggles are in sync
-            if (isActive) {
-                statsToggle.classList.remove("filter-pill-active");
-                statsElements.forEach((stat) => {
-                    stat.classList.remove("stats-active");
-                });
+    if (resumeButton) {
+        resumeButton.addEventListener("click", () => {
+            if (resumeContainer.style.display === "none") {
+                resumeContainer.style.display = "block";
+                resumeFrame.src = "BRINLY JAJA_2025 1.pdf"; // Make sure this file is in the correct folder
+                resumeButton.textContent = "Hide Résumé";
             } else {
-                statsToggle.classList.add("filter-pill-active");
-                statsElements.forEach((stat) => {
-                    stat.classList.add("stats-active");
-                });
+                resumeContainer.style.display = "none";
+                resumeFrame.src = "";
+                resumeButton.textContent = "View Résumé";
             }
         });
     }
