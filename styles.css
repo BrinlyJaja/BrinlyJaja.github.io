@@ -356,7 +356,7 @@
     align-items: center;
     margin-top: 30px;
   }
-  
+
   #resume-container {
     width: 90%;
     max-width: 800px;
@@ -366,11 +366,12 @@
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
   }
-  
+
   #resume-container.active {
-    max-height: 1000px; /* Enough to show iframe */
+    max-height: 1000px;
     opacity: 1;
   }
+  
   
   #resume-frame {
     width: 100%;
@@ -379,4 +380,5 @@
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
+  
   
