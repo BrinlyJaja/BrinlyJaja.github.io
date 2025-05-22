@@ -30,6 +30,16 @@ document.addEventListener("mousemove", function (e) {
         mouseX = e.clientX;
         mouseY = e.clientY;
         isMoving = true;
+        
+        const winWidth = window.innerWidth;
+        const winHeight = window.innerHeight;
+
+        const percentX = Math.round((e.pageX / winWidth) * 100);
+        const percentY = Math.round((e.pageY / winHeight) * 100);
+
+        document.body.style.setProperty("--mouse-x", `${percentX}%`);
+        document.body.style.setProperty("--mouse-y", `${percentY}%`);
+
 
         // Ensure the cursor is visible if it was previously hidden
         if (dot.style.display !== "block") {
