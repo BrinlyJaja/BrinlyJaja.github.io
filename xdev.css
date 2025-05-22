@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #fff;
+    background: #ffffff2b;
     overflow-x: hidden;
     font-family: system-ui, sans-serif;
 }
@@ -17,8 +17,8 @@ body {
     position: relative;
     max-width: 1000px;
     height: 500px;
-    background: #f5f5f5;
-    box-shadow: 0 30px 50px #dbdbdb;
+    background: #f5f5f522;
+    box-shadow: 0 30px 50px #dbdbdb88;
     overflow: hidden;
 }
 
