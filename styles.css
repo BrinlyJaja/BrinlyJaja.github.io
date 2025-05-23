@@ -75,7 +75,7 @@
     height: 100vh;
     z-index: -10;
     background: radial-gradient(
-        circle at var(--mouse-x, 60%) var(--mouse-y, 60%),
+        circle at var(--mouse-x, 70%) var(--mouse-y, 70%),
         rgba(255, 255, 255, 0.07),
         transparent 70%
       ),
