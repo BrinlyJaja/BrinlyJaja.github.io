@@ -395,6 +395,9 @@
     transform-origin: top center;
     border-radius: 10px;
   }
+  body {
+  overflow-x: hidden;
+}
 }
 
   
