@@ -49,6 +49,21 @@ document.addEventListener("mousemove", function (e) {
         resetInactivityTimer();
     }
 });
+// 👇 Touch support for mobile background interaction
+document.addEventListener("touchmove", function (e) {
+    if (window.innerWidth <= 768 && e.touches.length > 0) {
+        const touch = e.touches[0];
+        const winWidth = window.innerWidth;
+        const winHeight = window.innerHeight;
+
+        const percentX = Math.round((touch.pageX / winWidth) * 100);
+        const percentY = Math.round((touch.pageY / winHeight) * 100);
+
+        document.body.style.setProperty("--mouse-x", `${percentX}%`);
+        document.body.style.setProperty("--mouse-y", `${percentY}%`);
+    }
+});
+
 
 function updateCursor() {
     if (isMoving) {
