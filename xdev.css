@@ -8,7 +8,7 @@
 body {
     background: #ffffff2b;
     overflow-x: hidden;
-    font-family: system-ui, sans-serif;
+    font-family: "Bebas Kai", sans-serif !important;
 }
 
 /* Container Styles */
