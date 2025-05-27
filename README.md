@@ -4,7 +4,7 @@ Welcome to my personal **portfolio website** – a showcase of my coding project
 
 ## 🌐 Live Site
 
-[View the Portfolio](https://your-brinlyjaja.github.io)
+[View the Portfolio](https://github.com/BrinlyJaja/BrinlyJaja.github.io.git)
 
 
 ---
