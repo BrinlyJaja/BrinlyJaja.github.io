@@ -4,173 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brinly Jaja • Résumé</title>
+  <link rel="stylesheet" href="resume.css" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="projects.css" />
-  <style>
-    body {
-      background-color: #1E1E1E;
-      color: white;
-      font-family: 'Helvetica Neue', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 999;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 20px;
-    }
-
-    .resume-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .resume-section h2 {
-      margin-bottom: 0.4rem;
-      color: #ff9999;
-      border-bottom: 1px solid #444;
-      padding-bottom: 4px;
-    }
-
-    .resume-header {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      font-size: 14px;
-    }
-
-    .resume-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-    }
-
-    .download-btn {
-      text-align: right;
-    }
-
-    .download-btn a {
-      background-color: #ff6666;
-      color: white;
-      padding: 10px 16px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .download-btn a:hover {
-      background-color: #ff3333;
-    }
-
-    @media (max-width: 600px) {
-      .resume-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-      }
-
-      .download-btn {
-        text-align: center;
-        margin-top: 20px;
-      }
-    }
-  </style>
+  <script defer src="mouse.js"></script>
 </head>
-<body>
-
-  <nav>
-    <div><a href="index.html">← Back to Home</a></div>
-    <div class="download-btn">
-      <a href="BRINLY JAJA_2025 RESUME.pdf" download>Download Résumé</a>
+<body class="dark">
+  <div id="dot-cursor"></div>
+  
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">Brinly Jaja</a>
     </div>
-  </nav>
-
-  <div class="resume-container">
-    <div class="resume-header">
-      <strong>BRINLY JAJA • Norman, OK • +1-405-851-9126 • brinlyjaja3@gmail.com</strong><br>
-      <a href="https://www.linkedin.com/in/brinly-jaja-b22865280/" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/brinlyjaja" target="_blank">GitHub</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a class="active" href="resume.html">Résumé</a>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
     </div>
+    <div class="theme-toggle" id="theme-toggle">🌓</div>
+  </header>
 
-    <div class="resume-section">
-      <h2>EDUCATION</h2>
-      <p><strong>University of Oklahoma</strong> — Bachelor of Engineering, Computer Engineering (Aug 2026)</p>
-      <p><em>Coursework:</em> Intro to Programming, Data Structures, Discrete Structures</p>
-    </div>
+  <!-- Résumé Content -->
+  <main class="resume-container">
+    <section class="resume-header">
+      <h1>Brinly Jaja</h1>
+      <p>Norman, OK | +1-405-851-9126 | brinlyjaja3@gmail.com</p>
+      <p><a href="https://linkedin.com/in/brinly-jaja-b22865280/" target="_blank">LinkedIn</a> |
+         <a href="https://github.com/brinlyjaja" target="_blank">GitHub</a> |
+         <a href="BRINLY JAJA Resume1.pdf" download>Download PDF</a></p>
+    </section>
 
-    <div class="resume-section">
-      <h2>WORK EXPERIENCE</h2>
-      <p><strong>University Library Information System</strong> — Student Employee (Nov 2023 – Present)</p>
-      <ul>
-        <li>Managed metadata using Dublin Core, enhancing searchability of digitized items.</li>
-        <li>Used scanning tools and software (SilverFast, Photoshop) for archival-quality assets.</li>
-        <li>Enhanced visuals using Adobe Lightroom and Illustrator for structured workflows.</li>
-      </ul>
+    <section class="resume-section">
+      <h2>Summary</h2>
+      <p>Computer Engineering student with hands-on experience in software development and a strong interest in AI technologies. Demonstrated proficiency in Python and web development through academic projects and a recent AI workflow automation externship. Adept at turning complex challenges into efficient, production-ready solutions while collaborating in fast-paced environments.</p>
+    </section>
 
-      <p><strong>Extern, Outamation</strong> — AI-Powered Workflow Automation (May 2025 – Jul 2025)</p>
-      <ul>
-        <li>Worked remotely on real-world AI business operations projects.</li>
-        <li>Hands-on with Python, NLP, LlamaIndex (RAG), and document data extraction.</li>
-      </ul>
-    </div>
+    <section class="resume-section">
+      <h2>Education</h2>
+      <p><strong>University of Oklahoma</strong>, Aug 2026<br />
+      Bachelor of Engineering, Computer Engineering<br />
+      • Coursework: Introduction to programming, Programming structures and abstractions, data structures, Discrete structures</p>
+    </section>
 
-    <div class="resume-section">
-      <h2>UNIVERSITY PROJECTS</h2>
-      <p><strong>GPX to CSV using Java</strong> (Mar 2024)</p>
-      <ul>
-        <li>Built Java app to convert GPX GPS data to CSV for analysis.</li>
-        <li>Implemented error handling and data validation for 100% integrity.</li>
-        <li>Extracted 3-day geolocation data at 5-minute intervals.</li>
-      </ul>
+    <section class="resume-section">
+      <h2>Work Experience</h2>
+      <p><strong>University Library Information System</strong>, Nov 2023 – Present, Norman, OK<br />
+      • Managed metadata using digital archiving standards such as Dublin Core, enhancing searchability and backend systems.<br />
+      • Operated scanning equipment and correction tools like SilverFast and Photoshop to deliver archival-quality images.<br />
+      • Enhanced artifacts with Lightroom and Illustrator while supporting structured workflows.</p>
 
-      <p><strong>Java GUI</strong> (May 2024)</p>
-      <ul>
-        <li>Created Java GUI for map-based triplog animation with stop detection.</li>
-        <li>Enhanced user interactivity with real-time animation and tracking features.</li>
-      </ul>
-    </div>
+      <p><strong>Outamation</strong>, May 2025 – Jul 2025, Remote<br />
+      • Participated in AI workflow externship using Python.<br />
+      • Gained experience with NLP, document data extraction, and RAG via LlamaIndex.<br />
+      • Supported backend efficiency and AI-driven processes.</p>
+    </section>
 
-    <div class="resume-section">
-      <h2>SKILLS</h2>
-      <ul>
-        <li><strong>Languages:</strong> Java, Python, HTML, Go, C/C++</li>
-        <li><strong>Software:</strong> Troubleshooting, Tooling, Maintainable Code</li>
-        <li><strong>Creative Tools:</strong> Photoshop, Lightroom, Illustrator</li>
-        <li><strong>Productivity:</strong> Microsoft Excel, Access</li>
-      </ul>
-    </div>
+    <section class="resume-section">
+      <h2>University Projects</h2>
+      <p><strong>GPX to CSV Using Java</strong>, Mar 2024<br />
+      • Developed a Java tool for converting GPS GPX data into CSV for future accessibility.<br />
+      • Ensured data integrity with validation, parsing latitude/longitude every 5 mins.</p>
 
-    <div class="resume-section">
-      <h2>EXTRACURRICULAR ACTIVITIES</h2>
-      <p><strong>African Student Association</strong> — Education Officer (Aug 2023 – Jun 2025)</p>
-      <ul>
-        <li>Led educational efforts highlighting modern African culture and issues.</li>
-      </ul>
-    </div>
-  </div>
+      <p><strong>Java GUI</strong>, May 2024<br />
+      • Built a Java GUI for visualizing triplog data on a map with animation.<br />
+      • Implemented stop detection and real-time position tracking features.</p>
+    </section>
 
+    <section class="resume-section">
+      <h2>Skills</h2>
+      <p>
+        • Programming: Java, Python, Go, C/C++, JavaScript, HTML, CSS<br />
+        • Web/Software Dev: React, FastAPI, Machine Learning, LLMs, Backend Systems<br />
+        • Tools: Photoshop, Lightroom, Illustrator, Blender<br />
+        • Productivity: Excel, Access, MATLAB
+      </p>
+    </section>
+
+    <section class="resume-section">
+      <h2>Extracurricular Activities</h2>
+      <p><strong>African Student Association</strong>, Aug 2023 – Jun 2025, Education Officer<br />
+      • Led initiatives on African political/social movements, planned impactful events and forums.</p>
+
+      <p><strong>International Advisory Committee</strong>, Aug 2023 – Jun 2025, Creative Chair<br />
+      • Directed creative campaigns for global engagement and cross-cultural collaboration.</p>
+    </section>
+  </main>
 </body>
 </html>
+
+
 
 

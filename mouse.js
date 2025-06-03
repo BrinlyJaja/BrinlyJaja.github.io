@@ -412,15 +412,23 @@ document.querySelectorAll("iframe").forEach((iframe) => {
     iframe.addEventListener("mouseleave", showCursor);
 });
 
-const cursor = document.getElementById("dot-cursor");
 
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-  cursor.style.opacity = 1;
-});
-
-const toggleBtn = document.getElementById("mode-toggle");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("light-mode");
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+  
+    // Toggle navigation menu
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  
+    // Toggle dark/light theme
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  
+    // Show mouse cursor for all devices
+    document.body.style.cursor = "default";
+  });
+  
