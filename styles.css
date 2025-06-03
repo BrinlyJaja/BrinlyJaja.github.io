@@ -113,7 +113,7 @@
   }
   
   .intro-title{
-    font-size: 7rem;
+    font-size: 9rem;
     font-weight: 900;
     color: var(--text-color);
     margin-bottom: 10px;
@@ -128,14 +128,14 @@
     margin-top: 10px;
   }
   .typing-text {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 900;
     color: var(--text-color);
     font-family: "Bebas Kai", sans-serif;
   }
   
   .cursor {
-    font-size: 5rem;
+    font-size: 7rem;
     color: var(--bluestra);
     animation: blink 0.7s infinite;
   }

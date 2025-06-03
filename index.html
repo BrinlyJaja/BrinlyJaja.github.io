@@ -93,7 +93,8 @@
         <section class="splash-container" id="home">
             <div class="intro-header">
                 <h1 class="intro-title">
-                    <span class="typing-text></span><span class ="cursor"></span></h1>
+                    <span class="typing-text"></span><span class="cursor">|</span>
+                </h1>
                 <p class="intro-subheading">
                     A computer Engineer & Creative - Bridging tech and imagination.
                 </p>
@@ -365,22 +366,46 @@
         ></script>
         <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
        
-        <!-- Typing Animation Script -->
-  <script>
-    const text = "I'm Brinly.";
-    const typingElement = document.querySelector(".typing-text");
-    let index = 0;
-
-    function typeCharacter() {
-      if (index < text.length) {
-        typingElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeCharacter, 150);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", typeCharacter);
-  </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const text = "I'm Brinly.";
+              const typingElement = document.querySelector(".typing-text");
+              const cursor = document.querySelector(".cursor");
+              const subheading = document.querySelector(".intro-subheading");
+          
+              let index = 0;
+              let isDeleting = false;
+          
+              function typeLoop() {
+                if (!isDeleting && index < text.length) {
+                  typingElement.textContent += text.charAt(index);
+                  index++;
+                  setTimeout(typeLoop, 150);
+                } else if (isDeleting && index > 0) {
+                  typingElement.textContent = text.substring(0, index - 1);
+                  index--;
+                  setTimeout(typeLoop, 100);
+                } else {
+                  if (!isDeleting) {
+                    // When typing completes, show subheading and pause
+                    subheading.classList.add("fade-in");
+                    setTimeout(() => {
+                      isDeleting = true;
+                      typeLoop();
+                    }, 2000); // Delay before deleting
+                  } else {
+                    // Reset after deletion
+                    subheading.classList.remove("fade-in");
+                    isDeleting = false;
+                    setTimeout(typeLoop, 1000); // Pause before retyping
+                  }
+                }
+              }
+          
+              typeLoop();
+            });
+          </script>
+          
 
 
 
