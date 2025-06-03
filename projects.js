@@ -15,19 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add event listener for the Stats for Nerds toggle
     
-    resumeButton.addEventListener("click", () => {
-        const isActive = resumeContainer.classList.contains("active");
-    
-        if (!isActive) {
-          resumeContainer.classList.add("active");
-          resumeFrame.src = "resume.pdf";
-          resumeButton.textContent = "📄 Hide Résumé";
-        } else {
-          resumeContainer.classList.remove("active");
-          resumeFrame.src = "";
-          resumeButton.textContent = "📄 View Résumé";
-        }
-      });
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.toLowerCase();

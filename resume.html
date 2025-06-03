@@ -5,18 +5,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brinly Jaja • Résumé</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="projects.css" />
+  <style>
+    body {
+      background-color: #1E1E1E;
+      color: white;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 20px;
+    }
+
+    .resume-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .resume-section h2 {
+      margin-bottom: 0.4rem;
+      color: #ff9999;
+      border-bottom: 1px solid #444;
+      padding-bottom: 4px;
+    }
+
+    .resume-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    .download-btn {
+      text-align: right;
+    }
+
+    .download-btn a {
+      background-color: #ff6666;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn a:hover {
+      background-color: #ff3333;
+    }
+
+    @media (max-width: 600px) {
+      .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .download-btn {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html#home" class="nav-link">Home</a></li>
-      <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-      <li><a href="resume.html" class="nav-link active">Résumé</a></li>
-    </ul>
+
+  <nav>
+    <div><a href="index.html">← Back to Home</a></div>
+    <div class="download-btn">
+      <a href="BRINLY JAJA_2025 RESUME.pdf" download>Download Résumé</a>
+    </div>
   </nav>
-  <section style="padding-top: 100px; text-align: center;">
-    <h1>My Résumé</h1>
-    <iframe src="/path-to-your-resume.pdf" style="width: 80%; height: 800px; border: none;"></iframe>
-  </section>
+
+  <div class="resume-container">
+    <div class="resume-header">
+      <strong>BRINLY JAJA • Norman, OK • +1-405-851-9126 • brinlyjaja3@gmail.com</strong><br>
+      <a href="https://www.linkedin.com/in/brinly-jaja-b22865280/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/brinlyjaja" target="_blank">GitHub</a>
+    </div>
+
+    <div class="resume-section">
+      <h2>EDUCATION</h2>
+      <p><strong>University of Oklahoma</strong> — Bachelor of Engineering, Computer Engineering (Aug 2026)</p>
+      <p><em>Coursework:</em> Intro to Programming, Data Structures, Discrete Structures</p>
+    </div>
+
+    <div class="resume-section">
+      <h2>WORK EXPERIENCE</h2>
+      <p><strong>University Library Information System</strong> — Student Employee (Nov 2023 – Present)</p>
+      <ul>
+        <li>Managed metadata using Dublin Core, enhancing searchability of digitized items.</li>
+        <li>Used scanning tools and software (SilverFast, Photoshop) for archival-quality assets.</li>
+        <li>Enhanced visuals using Adobe Lightroom and Illustrator for structured workflows.</li>
+      </ul>
+
+      <p><strong>Extern, Outamation</strong> — AI-Powered Workflow Automation (May 2025 – Jul 2025)</p>
+      <ul>
+        <li>Worked remotely on real-world AI business operations projects.</li>
+        <li>Hands-on with Python, NLP, LlamaIndex (RAG), and document data extraction.</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h2>UNIVERSITY PROJECTS</h2>
+      <p><strong>GPX to CSV using Java</strong> (Mar 2024)</p>
+      <ul>
+        <li>Built Java app to convert GPX GPS data to CSV for analysis.</li>
+        <li>Implemented error handling and data validation for 100% integrity.</li>
+        <li>Extracted 3-day geolocation data at 5-minute intervals.</li>
+      </ul>
+
+      <p><strong>Java GUI</strong> (May 2024)</p>
+      <ul>
+        <li>Created Java GUI for map-based triplog animation with stop detection.</li>
+        <li>Enhanced user interactivity with real-time animation and tracking features.</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h2>SKILLS</h2>
+      <ul>
+        <li><strong>Languages:</strong> Java, Python, HTML, Go, C/C++</li>
+        <li><strong>Software:</strong> Troubleshooting, Tooling, Maintainable Code</li>
+        <li><strong>Creative Tools:</strong> Photoshop, Lightroom, Illustrator</li>
+        <li><strong>Productivity:</strong> Microsoft Excel, Access</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h2>EXTRACURRICULAR ACTIVITIES</h2>
+      <p><strong>African Student Association</strong> — Education Officer (Aug 2023 – Jun 2025)</p>
+      <ul>
+        <li>Led educational efforts highlighting modern African culture and issues.</li>
+      </ul>
+    </div>
+  </div>
+
 </body>
 </html>
+
+
