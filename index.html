@@ -86,8 +86,18 @@
         <!-- Microsoft Tiles -->
         <meta name="msapplication-TileColor" content="#1E1E1E" />
         <meta name="theme-color" content="#1E1E1E" />
+        
+        <!-- Put this last in your <head> -->
+            <script defer src="https://cloud.umami.is/script.js" data-website-id="f1406dd2-9414-4623-8bf2-dae0b05b7ea1"></script>
     </head>
     <body>
+        <nav class="navbar">
+            <ul class="nav-links">
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="resume.html" class="nav-link">Résumé</a></li>
+            </ul>
+          </nav>
         <div id="dot-cursor" style="display: none"></div>
         <canvas id="bg-canvas"></canvas>
         <section class="splash-container" id="home">
@@ -138,8 +148,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Put this last in your <head> -->
-                <script defer src="https://cloud.umami.is/script.js" data-website-id="f1406dd2-9414-4623-8bf2-dae0b05b7ea1"></script>
         </section>
 
         <!--Project Slider section-->
@@ -423,6 +431,30 @@
             </svg>
         </div>
         <script src="analytics.js"></script>
+        
+        <script>
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+          
+            window.addEventListener("scroll", () => {
+              let current = "";
+          
+              sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                  current = section.getAttribute("id");
+                }
+              });
+          
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                  link.classList.add("active");
+                }
+              });
+            });
+          </script>
+          
     </body>
 </html>
 

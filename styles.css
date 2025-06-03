@@ -480,5 +480,39 @@
   max-width: 800px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(24, 24, 24, 0.9);
+  padding: 12px 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--bluestra);
+}
 
   
