@@ -91,13 +91,22 @@
             <script defer src="https://cloud.umami.is/script.js" data-website-id="f1406dd2-9414-4623-8bf2-dae0b05b7ea1"></script>
     </head>
     <body>
-        <nav class="navbar">
-            <ul class="nav-links">
-              <li><a href="#home" class="nav-link">Home</a></li>
+        <nav class="nav-bar">
+            <div class="nav-brand">Brinly</div>
+          
+            <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation">
+              ☰
+            </button>
+          
+            <ul class="nav-links" id="nav-links">
+              <li><a href="index.html" class="nav-link">Home</a></li>
               <li><a href="#projects" class="nav-link">Projects</a></li>
-              <li><a href="resume.html" class="nav-link">Résumé</a></li>
+              <li><a href="resume.html" class="nav-link">Resume</a></li>
             </ul>
+          
+            <button id="mode-toggle" class="mode-btn">🌓</button>
           </nav>
+          
         <div id="dot-cursor" style="display: none"></div>
         <canvas id="bg-canvas"></canvas>
         <section class="splash-container" id="home">

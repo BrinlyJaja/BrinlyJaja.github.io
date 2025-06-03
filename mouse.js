@@ -411,3 +411,16 @@ document.querySelectorAll("iframe").forEach((iframe) => {
     iframe.addEventListener("mouseenter", hideCursor);
     iframe.addEventListener("mouseleave", showCursor);
 });
+
+const cursor = document.getElementById("dot-cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+  cursor.style.opacity = 1;
+});
+
+const toggleBtn = document.getElementById("mode-toggle");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});
