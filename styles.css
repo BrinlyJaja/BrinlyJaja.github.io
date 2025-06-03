@@ -107,7 +107,7 @@
   }
   
   .intro-header {
-    width:100%
+    width:100%;
     text-align: center;
     margin-bottom: 10px;
   }
@@ -123,7 +123,7 @@
  
   .intro-subheading {
     font-size: 1.4rem;
-    color: var(--text-color)
+    color: var(--text-color);
     margin-top: 10px;
   }
 
