@@ -98,13 +98,24 @@
   </style>
 </head>
 <body>
-
-  <nav>
-    <div><a href="index.html">← Back to Home</a></div>
-    <div class="download-btn">
-      <a href="BRINLY JAJA_2025 RESUME.pdf" download>Download Résumé</a>
+  <div id="dot-cursor" style="display: none"></div>
+  <nav class="navbar">
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="resume.html" class="nav-link active">Résumé</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a class="download-link" href="BRINLY JAJA Resume1.pdf" download>Download Résumé</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
     </div>
   </nav>
+  
+
 
   <div class="resume-container">
     <div class="resume-header">
@@ -170,8 +181,58 @@
     </div>
   </div>
 
+  <script src="mouse.js"></script>
+  <script src="scroll-prompt.js"></script>
+  <script
+      src="https://www.pathing.cc/pathing.js"
+      pathing-api-key="pk_927a2c5c19ef6b96d7ab99cea62a9e64aa2785e3c896283d"
+  ></script>
+  <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+  
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+  
+    window.addEventListener("scroll", () => {
+      let current = "";
+  
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+  
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+ 
+  <!-- Scroll Down Prompt -->
+   <div id="scroll-prompt" class="scroll-prompt">
+    <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M19 9L12 16L5 9"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
+    </svg>
+</div>
 </body>
 </html>
+
 
 
 

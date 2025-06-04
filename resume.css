@@ -33,11 +33,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background: rgba(24, 24, 24, 0.95);
-  color: #fff;
-  padding: 12px 24px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  color: #ffff
 }
 
 .navbar .nav-logo {
@@ -174,13 +170,63 @@ body {
     border-radius: 8px;
   }
 
-  .navbar .nav-right.show {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(24, 24, 24, 0.9);
+    padding: 12px 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-gray);
+  }
+
+  .nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--bluestra);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
     display: flex;
   }
 
   .hamburger {
     display: flex;
   }
+}
+
 
   .resume-header h1 {
     font-size: 1.8rem;
