@@ -92,6 +92,11 @@
     </head>
     <body>
         <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             <ul class="nav-links">
               <li><a href="#home" class="nav-link">Home</a></li>
               <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -350,6 +355,18 @@
 
                       
         </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const hamburger = document.getElementById('hamburger');
+              const navLinks = document.querySelector('.nav-links');
+              hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+              });
+              navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => navLinks.classList.remove('show'));
+              });
+            });
+          </script>
         <script src="mouse.js"></script>
         <script src="projects.js"></script>
         <script src="bg.js"></script>

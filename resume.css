@@ -6,9 +6,7 @@ body {
   background: linear-gradient(to bottom, #0a0a0a, #180c38);
   color: #fff;
   overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 /* ========== Cursor Dot ========== */
@@ -182,7 +180,7 @@ body {
 }
 
 .resume-item h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #fff;
   border-bottom: 2px solid #ff6e6e;
   padding-bottom: 4px;
@@ -196,11 +194,11 @@ body {
 }
 
 .resume-item ul {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 .resume-item li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* ========== Responsive ========== */
@@ -221,6 +219,7 @@ body {
     z-index: 100;
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #333;
+    left: 0;
   }
 
   .nav-center {
@@ -258,17 +257,14 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .resume-container {
-    padding: 12px 2px;
-    margin-top: 70px;
-    border-radius: 12px;
+    padding: 8px 2px;
+    margin-top: 50px;
+  }
+  .resume-section h2 {
+    font-size: 1.3rem;
   }
 }
 
-/* ========== Dark Mode ========== */
-.dark-mode {
-  background: linear-gradient(to bottom, #f7f8ff, #cbd8f5);
-  color: #000;
-}
 
