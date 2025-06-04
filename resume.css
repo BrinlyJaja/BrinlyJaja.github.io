@@ -30,7 +30,12 @@ body {
   justify-content: space-between;
   background: rgba(24, 24, 24, 0.95);
   color: #ffff;
-  position: relative;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #333;
   z-index: 100;
 }
 
