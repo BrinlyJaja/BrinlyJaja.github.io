@@ -1,79 +1,90 @@
+/* ========== Resume Page Base ========== */
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #0f0f1a, #1b1b2f);
+  font-family: "Bebas Kai", sans-serif;
+  background: linear-gradient(to bottom, #0a0a0a, #180c38);
   color: #fff;
   overflow-x: hidden;
 }
 
-.resume-container {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.dark-mode {
+  background: linear-gradient(to bottom, #f7f8ff, #cbd8f5);
+  color: #000;
 }
 
-.resume-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.2rem;
+/* ========== Cursor Dot ========== */
+#dot-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 200ms ease, transform 200ms ease;
 }
 
-.resume-header a {
-  color: #ff6666;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.resume-section h2 {
-  border-bottom: 2px solid #ff6666;
-  padding-bottom: 4px;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.resume-section p {
-  line-height: 1.6;
-  margin: 0.5rem 0;
-}
-
-/* Responsive Layout */
-@media screen and (min-width: 768px) {
-  .resume-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-  }
-
-  .resume-header {
-    grid-column: span 2;
-  }
-
-  .resume-section {
-    grid-column: span 2;
-  }
-}
-
-/* Navigation */
+/* ========== Navigation Bar ========== */
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 999;
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem 2rem;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(24, 24, 24, 0.95);
+  color: #fff;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.nav-links a {
-  color: white;
-  margin-left: 20px;
+.navbar .nav-logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #69f8ff;
   text-decoration: none;
 }
 
+.navbar .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: #69f8ff;
+  transition: width 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+.toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* ========== Hamburger Icon ========== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -82,45 +93,102 @@ body {
 
 .hamburger span {
   background: white;
-  margin: 4px 0;
   height: 3px;
-  width: 25px;
-  border-radius: 2px;
+  margin: 4px 0;
+  width: 24px;
+  border-radius: 3px;
 }
 
-/* Toggle Dark/Light Mode */
-.theme-toggle {
-  cursor: pointer;
-  margin-left: 20px;
+/* ========== Resume Section ========== */
+.resume-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .resume-container {
+.resume-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resume-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.resume-header p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.resume-links a {
+  margin: 0 12px;
+  color: #ff6e6e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resume-links a:hover {
+  text-decoration: underline;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.resume-item h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  border-bottom: 2px solid #ff6e6e;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.resume-item p,
+.resume-item ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.resume-item ul {
+  padding-left: 20px;
+}
+
+.resume-item li {
+  margin-bottom: 8px;
+}
+
+/* ========== Responsive ========== */
+@media screen and (max-width: 768px) {
+  .navbar .nav-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    background: rgba(24, 24, 24, 0.95);
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .navbar .nav-right.show {
     display: flex;
-    padding: 1rem;
   }
 
   .hamburger {
     display: flex;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    text-align: right;
+  .resume-header h1 {
+    font-size: 1.8rem;
   }
 
-  .nav-links a {
-    margin: 1rem;
-  }
-
-  .nav-links.active {
+  .resume-content {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }
