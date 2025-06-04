@@ -110,19 +110,35 @@ body {
 
 /* ========== Hamburger Icon ========== */
 .hamburger {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  z-index: 101;
 }
 
 .hamburger span {
   background: white;
   height: 3px;
   margin: 4px 0;
-  width: 24px;
+  width: 28px;
   border-radius: 3px;
+  display: block;
+  transition: all 0.3s;
 }
 
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+}
 /* ========== Resume Container (Glass Effect Centered) ========== */
 .resume-container {
   margin: auto;
@@ -266,5 +282,7 @@ body {
     font-size: 1.3rem;
   }
 }
+
+
 
 
