@@ -1,12 +1,14 @@
 /* ========== Resume Page Base ========== */
 
 body {
+  
   margin: 0;
   font-family: "Bebas Kai", sans-serif;
   background: linear-gradient(to bottom, #0a0a0a, #180c38);
   color: #fff;
   overflow-x: hidden;
 }
+
 
 .dark-mode {
   background: linear-gradient(to bottom, #f7f8ff, #cbd8f5);
