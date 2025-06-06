@@ -113,7 +113,7 @@
   }
   
   .intro-title{
-    font-size: 9rem;
+    font-size: 6rem;
     font-weight: 900;
     color: var(--text-color);
     margin-bottom: 10px;
@@ -420,16 +420,7 @@
   }
 
 
-.animated-heading-bg {
-  background: linear-gradient(135deg, #00f0ff, #ff6ec4, #936bff);
-  background-size: 300% 300%;
-  animation: gradientShift 10s ease infinite;
-  border-radius: 20px;
-  padding: 40px 30px;
-  margin: 0 auto 40px auto;
-  max-width: 800px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
+
 .navbar {
   position: fixed;
   top: 0;
