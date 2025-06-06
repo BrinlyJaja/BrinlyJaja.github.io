@@ -4,25 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = document.querySelectorAll(".project");
     const layoutButtons = document.querySelectorAll(".layout");
     // Add the stats toggle button
+    const statsToggle = document.querySelector(".project-stats-toggle .pill");
+    const statsElements = document.querySelectorAll(".stats");
 
-    const resumeButton = document.getElementById("resume-button");
-    const resumeContainer = document.getElementById("resume-container");
-    const resumeFrame = document.getElementById("resume-frame");
-
+  // Add event listener for the JAVA gui banner
+  const javaguiBanner = document.getElementById("java gui-banner");
+  if (javaguiBanner) {
+      javaguiBanner.addEventListener("click", () => {
+          window.location.href = "https://github.com/BrinlyJaja/Project-5-CS2334-.git";
+      });
+  }
 
 
    
 
-    // Add event listener for the Stats for Nerds toggle
-    
 
-    searchInput.addEventListener("input", () => {
-        const query = searchInput.value.toLowerCase();
-        filterProjects(query);
-
-        // Remove 'filter-pill-active' class from all pills when typing in search
-        filterPills.forEach((p) => p.classList.remove("filter-pill-active"));
-    });
 
     filterPills.forEach((pill) => {
         pill.addEventListener("click", () => {
