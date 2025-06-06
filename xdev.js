@@ -1,6 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
 let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
 let slide = document.querySelector('.slide');
+let items = Array.from(document.querySelectorAll('.slide .item'));
+let total = items.length;
+let current = 1; // index of the "active" item
+
 
 function updateVisualStates() {
     let items = document.querySelectorAll('.item');
@@ -25,3 +30,4 @@ prev.addEventListener('click', function () {
     updateVisualStates();
 });
 updateVisualStates();
+});
