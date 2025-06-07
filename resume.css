@@ -61,7 +61,7 @@ body {
 }
 
 .nav-link {
-  color: #fff;
+  color: #ffe9dd;
   text-decoration: none;
   font-weight: bold;
   padding: 6px 12px;
@@ -79,11 +79,9 @@ body {
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: -4px;
   left: 0;
   height: 2px;
   width: 0%;
-  background: #69f8ff;
   transition: width 0.3s;
 }
 
