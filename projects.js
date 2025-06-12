@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
+    // Add event listener for the brinly banner
+    const brinlybanner = document.getElementById("brinlyjaja-banner");
+    if (brinlybanner) {
+        brinlybanner.addEventListener("click", () => {
+            window.location.href = "https://brinlyjaja.github.io";
+        });
+    }
+  
 
    
 
