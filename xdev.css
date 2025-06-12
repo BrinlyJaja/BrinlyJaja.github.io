@@ -19,7 +19,7 @@ body {
     height: 500px;
     background: #f5f5f522;
     box-shadow: 0 30px 50px #dbdbdb88;
-    overflow: hidden;
+    overflow: visible;
     z-index: 5; /* Ensure it stays above background lsyers*/
 }
 
