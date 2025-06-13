@@ -173,4 +173,18 @@ body {
     .button {
         bottom: 10px;
     }
+    .content .name {
+        font-size: 17px;    /* smaller for mobile */
+        line-height: 1.2;
+    }
+    .content .des {
+        font-size: 9px;     /* smaller for mobile */
+        margin-top: 3px;
+        margin-bottom: 8px;
+    }
+    .content button {
+        font-size: 10px;    /* smaller for mobile */
+        padding: 5px 10px;
+    }
 }
+
